@@ -1,0 +1,2 @@
+source /home/valentina/Escritorio/Tp3_tecnicas/modbus_esclavo1/build/bootloader/gdbinit/symbols
+source /home/valentina/Escritorio/Tp3_tecnicas/modbus_esclavo1/build/bootloader/gdbinit/connect

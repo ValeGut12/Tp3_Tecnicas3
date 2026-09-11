@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_esclavo1/build/CMakeFiles/bootloader
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_esclavo1/build/CMakeFiles/bootloader.rule
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_esclavo1/build/CMakeFiles/bootloader-complete.rule
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_esclavo1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_esclavo1/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_esclavo1/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_esclavo1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_esclavo1/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_esclavo1/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_esclavo1/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
