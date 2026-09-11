@@ -1,0 +1,2 @@
+source /home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/gdbinit/symbols
+source /home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/gdbinit/connect

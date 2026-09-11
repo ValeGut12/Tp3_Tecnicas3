@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}
