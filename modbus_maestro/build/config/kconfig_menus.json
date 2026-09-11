@@ -32214,6 +32214,468 @@
                 "id": "component-config-wi-fi-provisioning-manager",
                 "title": "Wi-Fi Provisioning Manager",
                 "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": "FMB_COMM_MODE_TCP_EN",
+                                "help": "Modbus default port number used by Modbus TCP stack",
+                                "id": "FMB_TCP_PORT_DEFAULT",
+                                "name": "FMB_TCP_PORT_DEFAULT",
+                                "range": [
+                                    0,
+                                    65535
+                                ],
+                                "title": "Modbus TCP port number",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "FMB_COMM_MODE_TCP_EN",
+                                "help": "Maximum allowed connections number for Modbus TCP stack.\nThis is used by Modbus master and slave port layer to establish connections.\nThis parameter may decrease performance of Modbus stack and can cause\nincreasing of processing time (increase only if absolutely necessary).",
+                                "id": "FMB_TCP_PORT_MAX_CONN",
+                                "name": "FMB_TCP_PORT_MAX_CONN",
+                                "range": [
+                                    1,
+                                    10
+                                ],
+                                "title": "Maximum allowed connections for TCP stack",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "FMB_COMM_MODE_TCP_EN",
+                                "help": "Modbus TCP connection timeout in seconds.\nOnce expired the current connection with the client will be closed\nand Modbus TCP slave will be waiting for new connection to accept.\nThis timeout is applicable for Modbus TCP master when it tries to connect to the Modbus TCP slaves.",
+                                "id": "FMB_TCP_CONNECTION_TOUT_SEC",
+                                "name": "FMB_TCP_CONNECTION_TOUT_SEC",
+                                "range": [
+                                    1,
+                                    7200
+                                ],
+                                "title": "Modbus TCP connection timeout",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "FMB_COMM_MODE_TCP_EN",
+                                "help": "This option is used to set keep-alive time for Modbus TCP connections.\nThis timeout is the interval after which the device sends keep-alive messages\nto maintain a connection with a server before register the error.\nThe keep-alive time can be configured and should be set based on the actual needs of the application,\nconsidering the trade-off between keeping the connection alive and minimizing system load.",
+                                "id": "FMB_TCP_KEEP_ALIVE_TOUT_SEC",
+                                "name": "FMB_TCP_KEEP_ALIVE_TOUT_SEC",
+                                "range": [
+                                    1,
+                                    7200
+                                ],
+                                "title": "Modbus TCP keep alive timeout (seconds)",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "FMB_COMM_MODE_TCP_EN",
+                                "help": "This option represents a maximum time the driver task can block while waiting\nfor an event during each loop iteration. Lower values allow the system to handle failures\nwhile waiting for socket IO events, though they slightly increase CPU usage.\nFor high-throughput applications with many concurrent connections, reducing to 10-20 ms may help.",
+                                "id": "FMB_TCP_EVENT_WAIT_MS",
+                                "name": "FMB_TCP_EVENT_WAIT_MS",
+                                "range": [
+                                    10,
+                                    500
+                                ],
+                                "title": "Modbus TCP event wait timeout (ms)",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "FMB_COMM_MODE_TCP_EN",
+                                "help": "The option applies to SO_RCVTIMEO when reading the MBAP header from a socket.\nThis is the worst-case blocking time if a partial TCP segment arrives.\nOn a reliable LAN, 50-100 ms is sufficient. Lower values reduce the\nmaximum stall that one slow connection can impose on other connections.",
+                                "id": "FMB_TCP_READ_TIMEOUT_MS",
+                                "name": "FMB_TCP_READ_TIMEOUT_MS",
+                                "range": [
+                                    1,
+                                    500
+                                ],
+                                "title": "Modbus TCP socket read timeout (ms)",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "FMB_COMM_MODE_TCP_EN",
+                                "help": "This is a timeout for the socket writability check and send operation.\nBefore each send, the driver verifies the socket is writable via select function.\nReduce for faster failure detection; increase on high-latency links.",
+                                "id": "FMB_TCP_SEND_TIMEOUT_MS",
+                                "name": "FMB_TCP_SEND_TIMEOUT_MS",
+                                "range": [
+                                    10,
+                                    1000
+                                ],
+                                "title": "Modbus TCP send timeout (ms)",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "FMB_COMM_MODE_TCP_EN",
+                                "help": "This option represents the maximum time allocated to event loop run function per driver loop iteration.\nThe value controls how many queued events (connect, send, error, etc.) are dispatched\nbefore returning to check sockets. Lower values reduce latency for socket\nI/O at the cost of processing fewer events per iteration.",
+                                "id": "FMB_TCP_EVENT_LOOP_TICK_MS",
+                                "name": "FMB_TCP_EVENT_LOOP_TICK_MS",
+                                "range": [
+                                    10,
+                                    300
+                                ],
+                                "title": "Modbus TCP event loop processing budget (ms)",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "FMB_COMM_MODE_TCP_EN",
+                                "help": "If this option is set the Modbus stack uses UID (Unit Identifier) field in MBAP frame.\nElse the UID is ignored by master and slave.",
+                                "id": "FMB_TCP_UID_ENABLED",
+                                "name": "FMB_TCP_UID_ENABLED",
+                                "range": null,
+                                "title": "Modbus TCP enable UID (Unit Identifier) support",
+                                "type": "bool"
+                            }
+                        ],
+                        "depends_on": "LWIP_ENABLE",
+                        "help": "Enable Modbus TCP option for stack.",
+                        "id": "FMB_COMM_MODE_TCP_EN",
+                        "name": "FMB_COMM_MODE_TCP_EN",
+                        "range": null,
+                        "title": "Enable Modbus stack support for TCP communication mode",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable RTU Modbus communication mode option for Modbus serial stack.",
+                        "id": "FMB_COMM_MODE_RTU_EN",
+                        "name": "FMB_COMM_MODE_RTU_EN",
+                        "range": null,
+                        "title": "Enable Modbus stack support for RTU mode",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable ASCII Modbus communication mode option for Modbus serial stack.",
+                        "id": "FMB_COMM_MODE_ASCII_EN",
+                        "name": "FMB_COMM_MODE_ASCII_EN",
+                        "range": null,
+                        "title": "Enable Modbus stack support for ASCII mode",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "If master sends a frame which is not broadcast, it has to wait some time for slave response.\nif slave is not respond in this time, the master will process timeout error.",
+                        "id": "FMB_MASTER_TIMEOUT_MS_RESPOND",
+                        "name": "FMB_MASTER_TIMEOUT_MS_RESPOND",
+                        "range": [
+                            150,
+                            30000
+                        ],
+                        "title": "Slave respond timeout (Milliseconds)",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "This option represents the maximum API blocking time used by controller API calls.\nThis API blocking time was intentionally separated from master timeout = CONFIG_FMB_MASTER_TIMEOUT_MS_RESPOND\nto prevent possible misconfiguration and the value must be higher than the master timeout.",
+                        "id": "FMB_MASTER_MAX_API_BLOCKING_TIME_MS",
+                        "name": "FMB_MASTER_MAX_API_BLOCKING_TIME_MS",
+                        "range": [
+                            3000,
+                            200000
+                        ],
+                        "title": "Modbus TCP master API blocking threshold (ms)",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "If master sends a broadcast frame, it has to wait conversion time to delay,\nthen master can send next frame.",
+                        "id": "FMB_MASTER_DELAY_MS_CONVERT",
+                        "name": "FMB_MASTER_DELAY_MS_CONVERT",
+                        "range": [
+                            150,
+                            2000
+                        ],
+                        "title": "Slave conversion delay (Milliseconds)",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Modbus event queue length. It is used by event queue tasks\nfor corresponding communication mode.",
+                        "id": "FMB_QUEUE_LENGTH",
+                        "name": "FMB_QUEUE_LENGTH",
+                        "range": [
+                            10,
+                            500
+                        ],
+                        "title": "Modbus event task queue length",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Modbus port task stack size for rx/tx event processing.\nIt may be adjusted when debugging is enabled (for example).",
+                        "id": "FMB_PORT_TASK_STACK_SIZE",
+                        "name": "FMB_PORT_TASK_STACK_SIZE",
+                        "range": [
+                            2048,
+                            16384
+                        ],
+                        "title": "Modbus port task stack size",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Modbus RX/TX buffer size for UART driver initialization.\nThis buffer is used for modbus frame transfer. The Modbus protocol maximum\nframe size is 260 bytes (TCP). Bigger size can be used for non standard implementations.",
+                        "id": "FMB_BUFFER_SIZE",
+                        "name": "FMB_BUFFER_SIZE",
+                        "range": [
+                            256,
+                            2048
+                        ],
+                        "title": "Modbus RX/TX buffer size",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "FMB_COMM_MODE_ASCII_EN",
+                        "help": "This option defines the number of data bits per ASCII character.",
+                        "id": "FMB_SERIAL_ASCII_BITS_PER_SYMB",
+                        "name": "FMB_SERIAL_ASCII_BITS_PER_SYMB",
+                        "range": [
+                            7,
+                            8
+                        ],
+                        "title": "Number of data bits per ASCII character",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "FMB_COMM_MODE_ASCII_EN",
+                        "help": "This option defines response timeout of slave in milliseconds for ASCII communication mode.\nThus the timeout will expire and allow the master program to handle the error.",
+                        "id": "FMB_SERIAL_ASCII_TIMEOUT_RESPOND_MS",
+                        "name": "FMB_SERIAL_ASCII_TIMEOUT_RESPOND_MS",
+                        "range": [
+                            200,
+                            5000
+                        ],
+                        "title": "Response timeout for ASCII communication mode (ms)",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Modbus port data processing task priority.\nThe priority of Modbus controller task is equal to (CONFIG_FMB_PORT_TASK_PRIO - 1).",
+                        "id": "FMB_PORT_TASK_PRIO",
+                        "name": "FMB_PORT_TASK_PRIO",
+                        "range": [
+                            3,
+                            23
+                        ],
+                        "title": "Modbus port task priority",
+                        "type": "int"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": "<choice FMB_PORT_TASK_AFFINITY>",
+                                "help": null,
+                                "id": "FMB_PORT_TASK_AFFINITY_NO_AFFINITY",
+                                "name": "FMB_PORT_TASK_AFFINITY_NO_AFFINITY",
+                                "range": null,
+                                "title": "No affinity",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "<choice FMB_PORT_TASK_AFFINITY>",
+                                "help": null,
+                                "id": "FMB_PORT_TASK_AFFINITY_CPU0",
+                                "name": "FMB_PORT_TASK_AFFINITY_CPU0",
+                                "range": null,
+                                "title": "CPU0",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "<choice FMB_PORT_TASK_AFFINITY>",
+                                "help": null,
+                                "id": "FMB_PORT_TASK_AFFINITY_CPU1",
+                                "name": "FMB_PORT_TASK_AFFINITY_CPU1",
+                                "range": null,
+                                "title": "CPU1",
+                                "type": "bool"
+                            }
+                        ],
+                        "depends_on": "!FREERTOS_UNICORE",
+                        "help": "Allows setting the core affinity of the Modbus controller task, i.e. whether the task is pinned to\nparticular CPU, or allowed to run on any CPU.",
+                        "id": "component-config-modbus-configuration-modbus-task-affinity",
+                        "name": "FMB_PORT_TASK_AFFINITY",
+                        "title": "Modbus task affinity",
+                        "type": "choice"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "FMB_PORT_TASK_AFFINITY",
+                        "name": "FMB_PORT_TASK_AFFINITY",
+                        "range": null,
+                        "title": null,
+                        "type": "hex"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": "FMB_CONTROLLER_SLAVE_ID_SUPPORT",
+                                "help": "Modbus slave ID value to identify modbus device\nin the network using <Report Slave ID> command.\nMost significant byte of ID is used as short device ID and\nother three bytes used as long ID.",
+                                "id": "FMB_CONTROLLER_SLAVE_ID",
+                                "name": "FMB_CONTROLLER_SLAVE_ID",
+                                "range": [
+                                    0,
+                                    285960729237
+                                ],
+                                "title": "Modbus controller slave ID",
+                                "type": "hex"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "FMB_CONTROLLER_SLAVE_ID_SUPPORT",
+                                "help": "Modbus slave ID buffer size used to store vendor specific ID information\nfor the <Report Slave ID> command.",
+                                "id": "FMB_CONTROLLER_SLAVE_ID_MAX_SIZE",
+                                "name": "FMB_CONTROLLER_SLAVE_ID_MAX_SIZE",
+                                "range": [
+                                    4,
+                                    255
+                                ],
+                                "title": "Modbus Slave ID maximum buffer size (bytes)",
+                                "type": "int"
+                            }
+                        ],
+                        "depends_on": null,
+                        "help": "Modbus slave ID support enable.\nWhen enabled the Modbus <Report Slave ID> command is supported by stack.",
+                        "id": "FMB_CONTROLLER_SLAVE_ID_SUPPORT",
+                        "name": "FMB_CONTROLLER_SLAVE_ID_SUPPORT",
+                        "range": null,
+                        "title": "Modbus controller slave ID support",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Modbus controller notification timeout in milliseconds.\nThis timeout is used to send notification about accessed parameters.",
+                        "id": "FMB_CONTROLLER_NOTIFY_TIMEOUT",
+                        "name": "FMB_CONTROLLER_NOTIFY_TIMEOUT",
+                        "range": [
+                            0,
+                            200
+                        ],
+                        "title": "Modbus controller notification timeout (ms)",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Modbus controller notification queue size.\nThe notification queue is used to get information about accessed parameters.",
+                        "id": "FMB_CONTROLLER_NOTIFY_QUEUE_SIZE",
+                        "name": "FMB_CONTROLLER_NOTIFY_QUEUE_SIZE",
+                        "range": [
+                            0,
+                            200
+                        ],
+                        "title": "Modbus controller notification queue size",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Modbus controller task stack size. The Stack size may be adjusted when\ndebug mode is used which requires more stack size (for example).",
+                        "id": "FMB_CONTROLLER_STACK_SIZE",
+                        "name": "FMB_CONTROLLER_STACK_SIZE",
+                        "range": [
+                            2048,
+                            32768
+                        ],
+                        "title": "Modbus controller stack size",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Modbus stack event queue timeout in milliseconds. This may help to optimize\nModbus stack event processing time.",
+                        "id": "FMB_EVENT_QUEUE_TIMEOUT",
+                        "name": "FMB_EVENT_QUEUE_TIMEOUT",
+                        "range": [
+                            10,
+                            500
+                        ],
+                        "title": "Modbus stack event queue timeout (ms)",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "If this option is set the Modbus stack uses ISR dispatch method\nto send timeout events from the callback function called from ISR.\nThis option has dependency with the UART_ISR_IN_IRAM option which places UART interrupt\nhandler into IRAM to prevent delays related to processing of UART events.",
+                        "id": "FMB_TIMER_USE_ISR_DISPATCH_METHOD",
+                        "name": "FMB_TIMER_USE_ISR_DISPATCH_METHOD",
+                        "range": null,
+                        "title": "Modbus timer uses ISR dispatch method",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "If this option is set the Modbus stack supports extended list of types\nin data dictionary and conversion API to work with the extended types\notherwise the only legacy types are supported. The extended types include\ninteger, float, double types with different endianness and size.",
+                        "id": "FMB_EXT_TYPE_SUPPORT",
+                        "name": "FMB_EXT_TYPE_SUPPORT",
+                        "range": null,
+                        "title": "Modbus uses extended types to support third party devices",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "This option defines the maximum number of Modbus command handlers for Modbus master and slave.\nThe option can be useful to register additional commands and its handlers.",
+                        "id": "FMB_FUNC_HANDLERS_MAX",
+                        "name": "FMB_FUNC_HANDLERS_MAX",
+                        "range": [
+                            16,
+                            255
+                        ],
+                        "title": "Maximum number of Modbus function handlers",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TOOLCHAIN_GCC",
+                        "help": "Enable compiler static analyzer for Modbus library.\nThis is workaround to avoid false-positives for some IDF related components.\nWhen enabled, the library files will be analysed with GCC static analyzer.",
+                        "id": "FMB_COMPILER_STATIC_ANALYZER_ENABLE",
+                        "name": "FMB_COMPILER_STATIC_ANALYZER_ENABLE",
+                        "range": null,
+                        "title": "Enable compiler static analyzer for Modbus library",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "This option enables the integration of Modbus library with MDNS library.\nWhen enabled, the Modbus library will use the MDNS API to resolve the node names within Modbus segment.",
+                        "id": "FMB_MDNS_INTEGRATION_ENABLE",
+                        "name": "FMB_MDNS_INTEGRATION_ENABLE",
+                        "range": null,
+                        "title": "Enable MDNS integration for Modbus library",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": null,
+                "id": "component-config-modbus-configuration",
+                "title": "Modbus configuration",
+                "type": "menu"
             }
         ],
         "depends_on": null,

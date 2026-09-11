@@ -838,6 +838,13 @@
 /home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/wifi_provisioning/CMakeFiles/install.dir
 /home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/wifi_provisioning/CMakeFiles/install/local.dir
 /home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/wifi_provisioning/CMakeFiles/install/strip.dir
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/espressif__esp-modbus/CMakeFiles/edit_cache.dir
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/espressif__esp-modbus/CMakeFiles/rebuild_cache.dir
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/espressif__esp-modbus/CMakeFiles/list_install_components.dir
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/espressif__esp-modbus/CMakeFiles/install.dir
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/espressif__esp-modbus/CMakeFiles/install/local.dir
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/espressif__esp-modbus/CMakeFiles/install/strip.dir
 /home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/main/CMakeFiles/__idf_main.dir
 /home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

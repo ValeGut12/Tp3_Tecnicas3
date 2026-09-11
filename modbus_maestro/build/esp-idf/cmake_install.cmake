@@ -559,6 +559,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/espressif__esp-modbus/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/main/cmake_install.cmake")
 endif()
 

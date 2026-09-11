@@ -157,4 +157,6 @@
 /home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/spiffs/libspiffs.a
 /home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/json/libjson.a
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/espressif__esp-modbus/libespressif__esp-modbus.a
 /home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/main/libmain.a
+/home/valentina/Escritorio/Tp3_tecnicas/modbus_maestro/build/esp-idf/espressif__esp-modbus/libespressif__esp-modbus.a
