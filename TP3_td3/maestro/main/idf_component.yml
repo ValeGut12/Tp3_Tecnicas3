@@ -1,0 +1,4 @@
+## Dependencias del componente main (las baja el Component Manager al compilar).
+dependencies:
+  idf: ">=5.0"
+  espressif/esp-modbus: "^2.0.0"
